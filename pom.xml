@@ -13,6 +13,8 @@
         <module>spring-multi-enviorment</module>
         <module>spring-grpc</module>
         <module>spring-grpc-server</module>
+        <module>deploy_own_jar</module>
+        <module>deploy_own_jar_imp</module>
     </modules>
 
     <parent>
