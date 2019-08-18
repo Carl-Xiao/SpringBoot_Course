@@ -1,3 +1,12 @@
 spring:
   profiles:
-    active: test
+    active: dev
+redission:
+  url: redis://localhost:6379
+  passwprd: cd123456
+  database: 0
+server:
+  port: 8080
+
+
+
