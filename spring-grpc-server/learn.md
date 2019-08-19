@@ -17,6 +17,11 @@ curl http://localhost:8083
 - 使用方式相比其他rpc也不会太复杂,(我本身不是追求极致的性能，尚未压测过).
 - 支持的开发语言比较多
 
+
+
+
 #### 待修改
 - grpc集群(暂时使用单机已足够用)
+> [nginx+grpc使用说明](https://blog.csdn.net/XBW1111/article/details/95047613)
+
 - 完善使用说明文档
