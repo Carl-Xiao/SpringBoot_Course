@@ -42,6 +42,15 @@ emoji表情 | emojiCode | commit说明
 🏁 (旗帜)	|checked_flag|	修复 Windows 下的问题
 
 
+### 了解开源协议框架
+
+[http://choosealicense.online/](http://choosealicense.online/)
+
+
+### SpringBoot学习推荐导航
+[http://springboot.fun/](http://springboot.fun/)
+
+> 参考各位大佬写blog,可以节省很多时间
 
 
 
