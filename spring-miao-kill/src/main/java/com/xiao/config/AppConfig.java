@@ -17,8 +17,7 @@ public class AppConfig {
     private static final Logger log = LoggerFactory.getLogger(AppConfig.class);
     @Autowired
     ConfigProperties configProperties;
-    /*@Value("${spring.datasource.useGlobalDataSourceStat}")
-    private boolean useGlobalDataSourceStat;*/
+
     @Bean     //声明其为Bean实例
     public DataSource dataSource() {
         DruidDataSource datasource = new DruidDataSource();
