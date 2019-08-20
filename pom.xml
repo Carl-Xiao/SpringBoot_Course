@@ -16,7 +16,7 @@
         <module>deploy_own_jar</module>
         <module>deploy_own_jar_imp</module>
         <module>spring-common-starter</module>
-        <module>spring-seckill</module>
+        <module>spring-miao-kill</module>
     </modules>
 
     <parent>
