@@ -53,7 +53,8 @@ emoji表情 | emojiCode | commit说明
 > 参考各位大佬写blog,可以节省很多时间
 
 
-
+### lomhok 插件下载地址
+[https://github.com/mplushnikov/lombok-intellij-plugin/releases](https://github.com/mplushnikov/lombok-intellij-plugin/releases)
 
 
 

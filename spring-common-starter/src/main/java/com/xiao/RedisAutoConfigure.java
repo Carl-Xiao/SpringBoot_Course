@@ -24,7 +24,7 @@ public class RedisAutoConfigure {
         String redisAddress = redisConfigProperties.getUrl();
         config.useSingleServer()
                 .setAddress(redisAddress)
-                .setPassword(redisConfigProperties.getPasswprd())
+                .setPassword(redisConfigProperties.getPassword())
                 .setDatabase(Integer.parseInt(redisConfigProperties.getDatabase()))
                 .setKeepAlive(true)
                 .setPingConnectionInterval(1000);

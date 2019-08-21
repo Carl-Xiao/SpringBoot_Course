@@ -31,6 +31,11 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybaits.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.xiao</groupId>
+            <artifactId>spring-common-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 </project>

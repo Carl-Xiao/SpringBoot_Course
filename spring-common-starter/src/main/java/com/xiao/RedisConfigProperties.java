@@ -5,15 +5,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "redission")
 public class RedisConfigProperties {
     private String url;
-    private String passwprd;
+    private String password;
     private String database;
 
-    public String getPasswprd() {
-        return passwprd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswprd(String passwprd) {
-        this.passwprd = passwprd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getDatabase() {

@@ -13,12 +13,17 @@ public interface SecKillDao {
 
     /**
      * 乐观锁
+     *
      * @param version 版本号
      * @return 值
      */
     @Update("update xiao_store set store=store-1,version=version+1 where store>0 and version=#{0}")
-    int updateStoreByVersion(int version);
+    int updateStoreByVersion(String version);
 
+    /**
+     * 利用innodb 行锁 约等于 悲观锁
+     * @return
+     */
     @Update("update xiao_store set store=store-1,version=version+1 where store>0 ")
     int updateStore();
 }
