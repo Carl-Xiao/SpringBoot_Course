@@ -15,3 +15,15 @@
 - 令牌算法+MQ异步处理数据(操作数据库)
 
 
+
+#### 测试项目
+
+```shell script
+// 利用redis生成令牌
+curl http://localhost:8083/generateToken
+
+// 消耗令牌 Spring消息处理
+curl http://localhost:8083/consumeGenerateToken
+```
+
+
