@@ -1,12 +1,16 @@
 package com.xiao.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.xiao.event.HelloEvent;
+import com.xiao.service.EventService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.Async;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -51,4 +55,16 @@ public class AppConfig {
         datasource.setConnectionProperties(configProperties.getConnectionProperties());
         return datasource;
     }
+
+    @Bean
+    public ApplicationListener<HelloEvent> helloApplicationListener(EventService eventService) {
+        return new ApplicationListener<HelloEvent>() {
+            @Async //这个必须加，异步
+            @Override
+            public void onApplicationEvent(HelloEvent event) {
+                eventService.processEvent(event.getSource().toString());
+            }
+        };
+    }
+
 }

@@ -1,9 +1,11 @@
 package com.xiao.controller;
 
 import com.xiao.dao.SecKillDao;
+import com.xiao.event.HelloEvent;
+import com.xiao.service.SecKillService;
 import org.redisson.api.RedissonClient;
-import org.redisson.client.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,12 +15,19 @@ public class HelloController {
     public SecKillDao secKillDao;
 
     @Autowired
+    public SecKillService secKillService;
+
+    @Autowired
     RedissonClient singleClient;
+
+    @Autowired
+    ApplicationContext applicationContext;
 
     @GetMapping
     public String hello() {
         return secKillDao.getVersion();
     }
+
     @GetMapping(value = "/killversion")
     public void killVersion() {
         String version = secKillDao.getVersion();
@@ -30,9 +39,14 @@ public class HelloController {
         }
     }
 
-    @GetMapping(value = "/version")
-    public String getVersion() {
-        return secKillDao.getVersion();
+    @GetMapping(value = "generateToken")
+    public void generateToken() {
+        secKillService.generateToken();
+    }
+
+    @GetMapping(value = "consumeGenerateToken")
+    public void consumeGenerateToken() {
+        applicationContext.publishEvent(new HelloEvent("miao_kill"));
     }
 
 }

@@ -28,6 +28,7 @@
     <properties>
         <java.version>1.8</java.version>
         <fastjson.verison>1.2.59</fastjson.verison>
+        <org.projectlombok.lombok>1.16.12</org.projectlombok.lombok>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -46,5 +47,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.lombok}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 </project>
