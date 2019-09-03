@@ -2,7 +2,6 @@ package com.xiao.controller;
 
 import org.elasticsearch.action.get.GetRequest;
 import org.elasticsearch.action.get.GetResponse;
-import org.elasticsearch.client.Client;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +18,8 @@ public class GetController {
 
     @GetMapping
     public Map get() {
-//        GetResponse response = client.prepareGet("cc", "_doc", "1").get();
         GetRequest getRequest = new GetRequest(
-                "cc",
+                "twitter_latest",
                 "1");
         GetResponse getResponse = null;
         try {
