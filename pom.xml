@@ -18,6 +18,7 @@
         <module>spring-common-starter</module>
         <module>spring-miao-kill</module>
         <module>spring-es</module>
+        <module>spring-maven-multi-envirment</module>
     </modules>
 
     <parent>
