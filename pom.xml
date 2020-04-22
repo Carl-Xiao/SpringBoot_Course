@@ -19,6 +19,7 @@
         <module>spring-miao-kill</module>
         <module>spring-es</module>
         <module>spring-maven-multi-envirment</module>
+        <module>spring-thymeleaf</module>
     </modules>
 
     <parent>
